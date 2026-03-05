@@ -1,6 +1,6 @@
-# Daily learning
+Daily learning
 
-## Recreating the PlayStation Store Interface with Angular
+# Recreating the PlayStation Store Interface with Angular
 
 Project developed during the Santander Bootcamp 2023 - Fullstack Java+Angular, under the guidance of specialist [Felipe Aguiar](https://github.com/felipeAguiarCode "Felipe Aguiar")
 Learning how to recreate the Playstation Store with Angular, applying layout components and refactoring.

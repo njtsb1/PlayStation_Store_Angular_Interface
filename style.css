@@ -1,0 +1,159 @@
+:root{
+  --bg:#000;
+  --panel:#0b0b0b;
+  --muted:#9aa0a6;
+  --accent:#1070ff;
+  --card:#111;
+  --text:#e6e6e6;
+  --glass: rgba(255,255,255,0.03);
+}
+
+:root.light{
+  --bg:#f5f6f7;
+  --panel:#ffffff;
+  --muted:#5a5f66;
+  --accent:#0b63d6;
+  --card:#ffffff;
+  --text:#111;
+  --glass: rgba(0,0,0,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:12px 20px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+.header-left{display:flex;align-items:center;gap:12px}
+.logo img{height:36px;display:block}
+
+.icon-btn{
+  background:transparent;
+  border:0;
+  color:var(--text);
+  cursor:pointer;
+  padding:6px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+}
+.icon{width:20px;height:20px}
+.icon.hidden{display:none}
+
+.header-center{flex:1;text-align:center}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:18px;justify-content:center}
+.nav-list a{color:var(--muted);text-decoration:none;font-weight:600}
+.nav-list a:hover{color:var(--text)}
+
+.header-right{display:flex;align-items:center;gap:12px}
+.lang-select select{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.04);
+  padding:6px 8px;
+  border-radius:6px;
+}
+
+/* Main */
+.main{flex:1;padding:28px 20px}
+.hero{padding:18px 0}
+.hero-title{margin:0;font-size:1.6rem}
+.hero-sub{margin:6px 0 0;color:var(--muted)}
+
+/* Carousel section */
+.carousel-section{margin-top:18px}
+.section-title{margin:0 0 12px 0;font-size:1.1rem;color:var(--muted)}
+
+.carousel{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:12px;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+  align-items:flex-start;
+}
+
+/* hide scrollbar but keep accessibility */
+.carousel::-webkit-scrollbar{height:10px}
+.carousel::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:10px}
+.carousel:focus{outline:2px solid rgba(16,112,255,0.18);outline-offset:6px}
+
+/* Game card */
+.game-card{
+  min-width:200px;
+  width:200px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6);
+  transition:transform .18s ease, box-shadow .18s ease;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.game-card:focus-within,
+.game-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.7)}
+
+.game-cover{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  background:linear-gradient(180deg, rgba(0,0,0,0.2), transparent);
+}
+
+.game-info{padding:10px}
+.game-title{margin:0;font-size:1rem}
+.game-type{margin:6px 0 0;color:var(--muted);font-size:0.82rem}
+.game-price{margin:8px 0 0;font-weight:700;color:var(--accent)}
+
+/* Footer */
+.site-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  border-top:1px solid rgba(255,255,255,0.03);
+  background:linear-gradient(0deg, rgba(255,255,255,0.01), transparent);
+}
+.site-footer small{display:block;color:var(--muted);font-size:0.9rem}
+
+/* Social icons */
+.socials{display:flex;gap:8px}
+.social-icon{width:20px;height:20px;color:var(--muted)}
+
+/* Accessibility helpers */
+.visually-hidden{
+  position:absolute!important;
+  height:1px;width:1px;
+  overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .nav-list{display:none}
+  .game-cover{height:220px}
+  .game-card{min-width:180px;width:180px}
+}
