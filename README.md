@@ -48,6 +48,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+<img width="1366" height="768" alt="homepage" src="https://github.com/user-attachments/assets/20e188fa-6d20-4bfd-99ab-583c2729efef" />
+
 [LICENSE](/LICENSE)
 
 See [original repository](https://github.com/felipeAguiarCode/angular-psn-store-clone).
